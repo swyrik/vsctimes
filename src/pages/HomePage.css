@@ -36,51 +36,7 @@
     border: 0;
 }
 
-/* Trust Section */
-.trust-section {
-    background: var(--color-bg-primary);
-    padding: var(--space-20) 0;
-}
-
-.trust-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-8);
-}
-
-.trust-item {
-    text-align: center;
-    padding: var(--space-8);
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius-2xl);
-    transition: all var(--transition-base);
-}
-
-.trust-item:hover {
-    border-color: var(--color-primary);
-    transform: translateY(-4px);
-}
-
-.trust-item__icon {
-    font-size: 3rem;
-    margin-bottom: var(--space-4);
-}
-
-.trust-item__title {
-    font-family: var(--font-display);
-    font-size: var(--text-lg);
-    font-weight: 700;
-    color: var(--color-text-primary);
-    margin-bottom: var(--space-3);
-}
-
-.trust-item__text {
-    font-size: var(--text-sm);
-    color: var(--color-text-tertiary);
-    line-height: 1.6;
-    margin: 0;
-}
+/* Trust Section extracted to src/components/home/TrustSection.css */
 
 /* Scroll Dots */
 .scroll-dots {

@@ -3,6 +3,7 @@ import Hero from '../components/home/Hero';
 import FeaturedArticles from '../components/home/FeaturedArticles';
 import CategoryGrid from '../components/home/CategoryGrid';
 import LatestArticles from '../components/home/LatestArticles';
+import TrustSection from '../components/home/TrustSection';
 import Footer from '../components/layout/Footer';
 import './HomePage.css';
 
@@ -115,41 +116,10 @@ const HomePage: React.FC = () => {
       </section>
       
       {/* Trust Signals Section */}
-      <section className="trust-section section scroll-snap-section" aria-labelledby="trust-title">
-        <div className="container">
-          <h2 id="trust-title" className="visually-hidden">Why Trust Us</h2>
-          <div className="trust-grid">
-            <div className="trust-item">
-              <div className="trust-item__icon">🔬</div>
-              <h3 className="trust-item__title">Hands-On Testing</h3>
-              <p className="trust-item__text">
-                We purchase and test every product for 6+ months before publishing our reviews.
-              </p>
-            </div>
-            <div className="trust-item">
-              <div className="trust-item__icon">✨</div>
-              <h3 className="trust-item__title">Unbiased Reviews</h3>
-              <p className="trust-item__text">
-                We don't accept payments for positive reviews. All opinions are our own.
-              </p>
-            </div>
-            <div className="trust-item">
-              <div className="trust-item__icon">👨‍💻</div>
-              <h3 className="trust-item__title">Expert Team</h3>
-              <p className="trust-item__text">
-                Our team includes engineers and industry experts with decades of experience.
-              </p>
-            </div>
-            <div className="trust-item">
-              <div className="trust-item__icon">🔄</div>
-              <h3 className="trust-item__title">Regular Updates</h3>
-              <p className="trust-item__text">
-                We continuously update our reviews based on long-term usage and new findings.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Trust Signals Section */}
+      <div className="scroll-snap-section">
+        <TrustSection />
+      </div>
 
       {/* Footer Section */}
       <section className="scroll-snap-section footer-section">
