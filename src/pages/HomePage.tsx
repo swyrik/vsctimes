@@ -39,7 +39,11 @@ const HomePage: React.FC = () => {
     const container = containerRef.current;
     if (!container) return;
 
+    // Helper to check if we should enable custom scrolling
+    const shouldEnableScroll = () => window.innerWidth > 768;
+
     const handleWheel = (e: WheelEvent) => {
+      if (!shouldEnableScroll()) return;
       e.preventDefault();
       
       if (isScrolling.current) return;
@@ -52,10 +56,12 @@ const HomePage: React.FC = () => {
     };
 
     const handleTouchStart = (e: TouchEvent) => {
+      if (!shouldEnableScroll()) return;
       touchStartY.current = e.touches[0].clientY;
     };
 
     const handleTouchEnd = (e: TouchEvent) => {
+      if (!shouldEnableScroll()) return;
       if (isScrolling.current) return;
       
       const touchEndY = e.changedTouches[0].clientY;
@@ -71,6 +77,7 @@ const HomePage: React.FC = () => {
     };
 
     const handleKeyDown = (e: KeyboardEvent) => {
+      if (!shouldEnableScroll()) return;
       if (isScrolling.current) return;
       
       switch (e.key) {

@@ -5,6 +5,31 @@
     position: relative;
 }
 
+@media (max-width: 768px) {
+    .home-page {
+        height: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .scroll-snap-section {
+        min-height: auto;
+        height: auto;
+        padding-top: var(--space-16);
+        padding-bottom: var(--space-8);
+        display: block;
+    }
+
+    .scroll-snap-section:first-child {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 0;
+    }
+
+}
+
 .scroll-snap-section {
     min-height: 100vh;
     display: flex;
